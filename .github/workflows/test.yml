@@ -1,0 +1,18 @@
+name: Hello World Display
+
+on:
+  push:
+    branches: 
+      - 'main'
+
+  workflow_dispatch:
+
+jobs:
+  hello:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: Hello World
+        run: echo "Hello World!"
+        shell: bash
